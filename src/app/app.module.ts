@@ -23,15 +23,16 @@ import { LaptopComponent } from './products/laptop/laptop.component';
 import { TvComponent } from './products/television/tv.component';
 import { MobileComponent } from './products/mobile/mobile.component';
 import { WashingMachineComponent } from './products/washing-machine/washing-machine.component';
+import { ParentComponent } from './parent/parent.component';
 
 //whenever we make routes we need make a constant
 const appRoutes:Routes=[
   {path:'' , redirectTo:'login' , pathMatch:'full'}, //this will make the page redirect to login by default
-
   {path:'login' , component : LoginComponent},
   {path:'home' , component : HomeComponent},
   {path:'about' , component : AboutComponent},
   {path:'contact' , component : ContactComponent},
+  {path:'buy-products' , component : ParentComponent},
   //below we are doing child routing of products
   {path:'products'  , children:[
     {path:'',component : ProductsComponent},
@@ -63,7 +64,8 @@ const appRoutes:Routes=[
     LaptopComponent,
     TvComponent,
     MobileComponent,
-    WashingMachineComponent
+    WashingMachineComponent,
+    ParentComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes)   ,
