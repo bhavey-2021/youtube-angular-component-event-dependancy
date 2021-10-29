@@ -1,0 +1,23 @@
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <!--to switch the active class we can include "routerlinkactive"-->
+      <li class="nav-item"><a class="nav-link " routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Home</a></li>
+      <!--we see that home is always active , hence to remove this we have done the following : "[routerLinkActiveOptions]"-->
+      <!--we use property binding's [] as we are going to pass 'js' object  -->
+      <!--exact:true will make the route active only when it will get the exact route of home , else it will not let it run -->
+      <li class="nav-item"><a class="nav-link "  routerLinkActive="active" routerLink="about/">About Us</a></li>
+      <li class="nav-item"><a class="nav-link " routerLinkActive="active"  routerLink="products/">Products</a></li>
+      <li class="nav-item"><a class="nav-link "  routerLinkActive="active" routerLink="contact/">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- <app-home></app-home> -->
+<!-- <app-products></app-products> -->
+<!--<app-about></app-about>-->
+<!--<app-contact></app-contact>-->
+<!-- WE NEED TO MAKE WEBSITE DYNAMIC WITH
+    CLICK TO SHOW PAGE -->
+<router-outlet></router-outlet><!-- this will help load the selected route dynamicaly -->
+<!-- "router-outlet" is a reserve directive -->
+<!-- <app-login></app-login> -->
